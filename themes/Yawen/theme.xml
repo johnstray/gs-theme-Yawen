@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <name>Yawen</name>
+    <settings>
+        <key>default-value</key>
+    </settings>
+    <custom_fields>
+        <sectioned>false</sectioned>
+        <showmenu>false</showmenu>
+    </custom_fields>
+</theme>
+
