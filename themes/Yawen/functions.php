@@ -59,11 +59,11 @@ function get_secondary_nav( string $type = 'siblings', bool $echo = true ): stri
 
 function get_page_parent_title( string $slug = '', bool $echo = true ): string
 {
-    $menudata = menu_data();
-    $currentpage = menu_data(get_page_slug(false));
-    $parent_title = '';
-    
     if ( empty($slug) ) { $slug = get_page_slug(false); }
+
+    $menudata = menu_data();
+    $currentpage = menu_data($slug);
+    $parent_title = '';
     
     foreach ( $menudata as $menuitem )
     {
@@ -76,4 +76,57 @@ function get_page_parent_title( string $slug = '', bool $echo = true ): string
     
     if ( $echo === true ) { echo $parent_title; }
     return $parent_title;
+}
+
+function get_page_parent_title_long( string $slug = '', bool $echo = true ): string
+{
+    if ( empty($slug) ) { $slug = get_page_slug(false); }
+
+    $menudata = menu_data();
+    $currentpage = menu_data($slug);
+    $parent_long_title = '';
+
+    foreach ( $menudata as $menuitem )
+    {
+        if $menuitem['slug'] == $current_page['parent_slug'] )
+        {
+            if ( isset($menuitem['titlelong']) )
+            {
+                $parent_long_title = $menuitem['titlelong'];
+                break;
+            }
+        }
+    }
+
+    if ( $echo === true ) { echo $parent_long_title; }
+    return $parent_long_title;
+}
+
+function get_page_parent_summary( string $slug = '', bool $echo = true ): string
+{
+    if ( empty($slug) ) { $slug = get_page_slug(false); }
+
+    $menudata = menu_data();
+    $currentpage = menu_data($slug);
+    $parent_summary = '';
+
+    foreach ( $menudata as $menuitem )
+    {
+        if $menuitem['slug'] == $current_page['parent_slug'] )
+        {
+            if ( isset($menuitem['summary']) )
+            {
+                $parent_summary = $menuitem['summary'];
+                break;
+            }
+            elseif ( isset($menuitem['metad']) )
+            {
+                $parent_summary = $menuitem['summary'];
+                break;
+            }
+        }
+    }
+
+    if ( $echo === true ) { echo $parent_long_title; }
+    return $parent_long_title;
 }
