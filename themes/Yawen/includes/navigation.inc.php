@@ -1,4 +1,4 @@
-<?php if ( defined('IN_GS') === false ) { echo "You cannot load this file directly!"; header("Location: /"); }
+<?php
 /**
  * Yawen Theme for GetSimple CMS
  * A theme designed to be simple yet elegant, focusing more on well constructed
@@ -9,9 +9,11 @@
  * @URL:        https://gs.johnstray.com/themes/yawen
  * @Version:    v1.0.0
  **/
-?>
 
-        <header id="navigation" class="p-navigation" style="background-color: #369;">
+// This file should not be loaded directly. It should be loaded in the context of GetSimple CMS
+if ( defined('IN_GS') === false ) { echo "You cannot load this file directly!"; header("Location: /"); }
+
+?><header id="navigation" class="p-navigation" style="background-color: #369;">
             <div class="p-navigation__row">
                 <div class="p-navigation__banner">
                     <div class="p-navigation__logo">
@@ -27,16 +29,10 @@
                     <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
                 </div>
 
-                <nav class="p-breadcrumbs" aria-label="Breadcrumbs">
-                    <ol class="p-breadcrumbs__items">
-                        <li class="p-breadcrumbs__item"><a href="#">Home</a></li>
-                        <li class="p-breadcrumbs__item"><a href="#"><?php get_section_title(true); ?></a></li>
-                    </ol>
-                </nav>
-
                 <nav class="p-navigation__nav u-align--right" aria-label="Example main navigation">
                     <ul class="p-navigation__items">
-                        <?php get_main_menu(); ?>
+                        <style>.p-navigation__link {width:auto;}</style>
+                        <?php get_navigation(get_page_slug(false), "p-navigation__link "); ?>
                     </ul>
                 </nav>
             </div>
