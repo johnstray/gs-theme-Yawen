@@ -29,10 +29,9 @@ if ( defined('IN_GS') === false ) { echo "You cannot load this file directly!"; 
                     <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
                 </div>
 
-                <nav class="p-navigation__nav u-align--right" aria-label="Example main navigation">
+                <nav class="p-navigation__nav" aria-label="Example main navigation">
                     <ul class="p-navigation__items">
-                        <style>.p-navigation__link {width:auto;}</style>
-                        <?php get_navigation(get_page_slug(false), "p-navigation__link "); ?>
+                        <?php get_multilevel_navigation(); ?>
                     </ul>
                 </nav>
             </div>

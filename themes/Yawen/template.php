@@ -33,6 +33,7 @@ GLOBAL $LANG;
                 <?php include('includes/page-header.inc.php'); // Include the page header template ?>
                 
             </header>
+            <hr class="is-fixed-width is-muted" />
             <div class="p-strip">
                 <div class="row">
                     <article class="col-8 js-toc-content">
@@ -57,6 +58,7 @@ GLOBAL $LANG;
         
         <?php get_footer(); // GetSimple plugin hook - used by plugins to inject their code ?>
 
+        <script id="vanilla-framework_v3.6.1" src="<?php get_theme_url(); ?>/assets/scripts/vanilla-framework.min.js"></script>
     </body>
 </html>
 
