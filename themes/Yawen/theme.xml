@@ -7,5 +7,74 @@
     <author>John Stray</author>
     <author-url>https://johnstray.com/gs-theme/Yawen/</author-url>
     <version>1.0.0</version>
+    <config/>
+    <customfields>
+        <second-nav>
+            <label>
+                <en_US>Secondary Navigation</en_US>
+            </label>
+            <hint>
+                <en_US>Shows a second level of navigation below page header</en_US>
+            </hint>
+            <type>dropdown</type>
+            <default>none</default>
+            <options>
+                <none>
+                    <en_US>None</en_US>
+                </none>
+                <children>
+                    <en_US>Child Pages</en_US>
+                </children>
+                <siblings>
+                    <en_US>Sibling Pages</en_US>
+                </siblings>
+                <parents>
+                    <en_US>Parent Pages</en_US>
+                </parents>
+            </options>
+        </second-nav>
+        <show-sidebar>
+            <label>
+                <en_US>Show sidebar</en_US>
+            </label>
+            <hint>
+                <en_US>Shows the sidebar with selected content</en_US>
+            </hint>
+            <type>dropdown</type>
+            <default>none</default>
+            <options>
+                <none>
+                    <en_US>None</en_US>
+                </none>
+                <contents>
+                    <en_US>Table of Contents</en_US>
+                </contents>
+                <children>
+                    <en_US>Child Pages Menu</en_US>
+                </children>
+                <blog>
+                    <en_US>Blog Navigation</en_US>
+                </blog>
+            </options>
+        </show-sidebar>
+        <parent-title>
+            <label>
+                <en_US>Replace title with Parent&apos;s</en_US>
+            </label>
+            <hint>
+                <en_US>Replaces the page header with details from parent page</en_US>
+            </hint>
+            <type>radio</type>
+            <default>disable</default>
+            <options>
+                <enable>
+                    <en_US>Enable</en_US>
+                </enable>
+                <disable>
+                    <en_US>Disable</en_US>
+                </disable>
+            </options>
+        </parent-title>
+    </customfields>
+    <blogfields/>
 </theme>
-
